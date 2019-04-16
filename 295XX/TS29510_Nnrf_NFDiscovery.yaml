@@ -26,7 +26,7 @@ paths:
           description: Type of the target NF
           required: true
           schema:
-            $ref: 'https://www.3gpp.org/ftp/Specs/archive/OpenAPI/Rel-15/TS29510_Nnrf_NFManagement.yaml/components/schemas/NFType'
+            $ref: 'TS29510_Nnrf_NFManagement.yaml#/components/schemas/NFType'
         - name: requester-nf-type
           in: query
           description: Type of the requester NF
