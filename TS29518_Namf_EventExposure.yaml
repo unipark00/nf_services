@@ -469,7 +469,7 @@ components:
       type: object
       properties:
         presenceInfo:
-          $ref: 'TS29571_CommonData.yaml#/components/schemas/PresenceInfo'
+          $ref: 'TS29571_CommonData.yaml#/components/schemas/PresenceInfo1'
         ladnInfo:
           $ref: '#/components/schemas/LadnInfo'
     LadnInfo:
