@@ -2083,7 +2083,7 @@ components:
       type: object
       properties:
         ueContext:
-          $ref: '#/components/schemas/UeContext1'
+          $ref: '#/components/schemas/UeContext'
         targetId:
           $ref: '#/components/schemas/NgRanTargetId'
         sourceToTargetData:
