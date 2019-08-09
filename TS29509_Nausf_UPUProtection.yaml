@@ -1,8 +1,12 @@
 openapi: 3.0.0
 info:
-  version: 1.0.0
+  version: 1.0.1
   title: Nausf_UPUProtection Service
-  description: AUSF UPU Protection Service
+  description: |
+    AUSF UPU Protection Service.
+    © 2019, 3GPP Organizational Partners (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC).
+    All rights reserved.
+
 servers:
   - url: '{apiRoot}/nausf-upuprotection/v1'
     variables:
@@ -47,8 +51,8 @@ components:
   securitySchemes:
     oAuth2ClientCredentials:
       type: oauth2
-      flows: 
-        clientCredentials: 
+      flows:
+        clientCredentials:
           tokenUrl: '{nrfApiRoot}/oauth2/token'
           scopes:
             nausf-upuprotection: Access to the Nausf_UPUProtection API
@@ -56,14 +60,14 @@ components:
     UpuInfo:
       type: object
       properties:
-        upuDataList: 
+        upuDataList:
           type: array
           items:
             $ref: '#/components/schemas/UpuData'
           minItems: 1
         upuAckInd:
-          $ref: '#/components/schemas/upuAckInd'
-      required: 
+          $ref: '#/components/schemas/UpuAckInd'
+      required:
         - upuDataList
         - upuAckInd
     UpuSecurityInfo:
@@ -87,7 +91,7 @@ components:
           type: array
           items:
             $ref: 'TS29571_CommonData.yaml#/components/schemas/Snssai'
-          minItems: 1 
+          minItems: 1
       oneOf:
         - required: [secPacket]
         - required: [defaultConfNssai]
